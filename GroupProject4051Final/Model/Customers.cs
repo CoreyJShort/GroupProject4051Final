@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GroupProject4051Final.Model;
 
-internal class Customers
+internal class Customers 
 {
     public List<Customer> CustomerList { get; set; } // List to store customer objects
 
