@@ -8,10 +8,14 @@ namespace GroupProject4051Final.Model;
 
 public class Appointment 
 <<<<<<< HEAD
+<<<<<<< HEAD
 { 
 =======
 {
 >>>>>>> pushing to master
+=======
+{ 
+>>>>>>> trying to merge to master
     //Properties for appointment details
     public string Id { get; set; } // Unique identifier for the appointment
     public string Notes { get; set; } // Additional notes for the appointment
