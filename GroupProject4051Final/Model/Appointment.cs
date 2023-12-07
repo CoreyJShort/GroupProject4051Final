@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GroupProject4051Final.Model;
 
-public class Appointment
+public class Appointment 
 {
     //Properties for appointment details
     public string Id { get; set; } // Unique identifier for the appointment
