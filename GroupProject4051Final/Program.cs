@@ -11,7 +11,7 @@ internal class Program
     private static string employeePassword = "admin"; // Employee password
 
     private static void Main()
-    {
+    {   
         customers = new Customers();
         employees = new List<Employee>
     {

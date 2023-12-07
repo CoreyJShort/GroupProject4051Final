@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GroupProject4051Final.Model;
 
 internal class Employee
-{
+{ 
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public List<DateTime> AvailableTimes { get; set; }
