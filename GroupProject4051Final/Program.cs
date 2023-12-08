@@ -4,18 +4,18 @@ namespace GroupProject4051Final;
 
 internal class Program
 {
-    private static Customers customers;
-    private static Customer loggedInUser;
-    private static List<Employee> employees;
+    private static Customers customers; //manage customer data
+    private static Customer loggedInUser; //track logged in user
+    private static List<Employee> employees; //employee data
     private static List<DateTime> availableTimes; // Declare at the class level
     private static string employeePassword = "admin"; // Employee password
 
     private static void Main()
     {   
-        customers = new Customers();
-        employees = new List<Employee>
+        customers = new Customers(); //initilize customer data
+        employees = new List<Employee> //initialize employees list
     {
-        new Employee("Corey Short", "Employee1"),
+        new Employee("Corey Short", "Employee1"), //build list
         new Employee("John Povinelli", "Employee2"),
         new Employee("Pat Crantz", "Employee3")
     };
@@ -86,27 +86,20 @@ internal class Program
                 Console.WriteLine("4. Exit To Main Menu");
                 Console.Write("Choose an option: ");
 
-                var employeeChoice = Console.ReadLine();
+                var employeeChoice = Console.ReadLine(); //read user's choice
 
-                switch (employeeChoice)
+                switch (employeeChoice) // switch statement to handle options
                 {
-                    case "1":
-                        // Assigned Appointment Times
+                    case "1":// Assigned Appointment Times                       
                         break;
-
-                    case "2":
-                        // Schedule Appointment
+                    case "2":// Schedule Appointment                   
                         break;
-
-                    case "3":
-                        // Manager Login
+                    case "3":// Manager Login                    
                         break;
-
-                    case "4":
+                    case "4":// Display and exit
                         Console.WriteLine("Exiting to Main Menu...");
                         return;
-
-                    default:
+                    default: //Display error
                         Console.WriteLine("Invalid option. Please enter a valid number.");
                         break;
                 }
@@ -114,7 +107,7 @@ internal class Program
         }
         else
         {
-            Console.WriteLine("Incorrect password. Access denied."); 
+            Console.WriteLine("Incorrect Information. Access denied."); //incorrect information, display message
         }
     }
 
@@ -158,13 +151,13 @@ internal class Program
 
     private static void ViewAppointmentTimes()
     {
-        Console.WriteLine("Select an employee to view available appointment times:");
-        for (int i = 0; i < employees.Count; i++)
+        Console.WriteLine("Select an employee to view available appointment times:"); //display list of employees
+        for (int i = 0; i < employees.Count; i++) //display a numbered list of employees for the user to choose from
         {
             Console.WriteLine($"{i + 1}. {employees[i].FirstName}");
         }
 
-        int selectedEmployeeIndex;
+        int selectedEmployeeIndex; //store index of selected employee
         while (true)
         {
             Console.Write("Enter the number of the employee (or 'x' to return to the main menu): ");// have user enter the number for the employee they want to select
